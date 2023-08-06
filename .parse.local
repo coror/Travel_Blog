@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Travel Blog": {
+      "applicationId": "36lQKKoydVje8eKwkzb3BBH43HVXgZdk57aAPKTE"
+    },
+    "_default": {
+      "link": "Travel Blog"
+    }
+  }
+}

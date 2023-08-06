@@ -1,0 +1,85 @@
+AppUser
+- fullName
+- email
+- username(email)
+- password 
+- avatar (pointer)
+- bio
+- social media links
+- travel interests
+
+Avatar 
+- user (pointer)
+
+BlogPost
+- title
+- description
+- date
+- location
+- user(pointer)
+- images (up to 5) (one to many)
+- likes(counts how many likes it has from Like object)
+- dislikes(counts how many dislikes it has from Dislike object)
+
+Picture
+-title
+-description
+-like(pointer)
+-dislike(pointer)
+
+Like
+- BlogPost(pointer)
+- Picture(pointer)
+- Comment(pointer)
+- User(pointer)
+
+Dislike
+- BlogPost(pointer)
+- Picture(pointer)
+- Comment(pointer)
+- User (pointer)
+
+Comment
+- content
+- user(pointer)
+- likes(counts how many likes it has from Like object)
+- dislikes(counts how man dislikes it has from Dislike object)
+
+AppUser
+- when deleting account, delete all comments, likes, dislikes and blogPosts associated with the user, and recount likes and dislikes for other comments and blogs if the deleted user has any
+
+BlogPost
+- when deleting blog, delete all comments from the blog and all likes/dislikes associated with this blog
+
+Comment
+-when deleting comment, delete all likes and dislikes 
+
+Like
+check if the user already liked the blog/post and if the user has already DISLIKED it, remove the dislike 
+
+Dislike
+same as like but reversed
+
+The plan you have outlined is quite comprehensive and covers the essential aspects of data management in the "Travel Blog" application. It should indeed provide you with good practice and a solid foundation for understanding data relationships and handling user interactions.
+
+However, if you want to further enhance your project and challenge yourself, here are a few additional suggestions you could consider implementing:
+
+User Profiles: Expand the user profiles to include additional information such as a bio/description, social media links, or the user's travel interests. This will make the user experience more engaging and provide a more personalized touch to the application.
+
+Search Functionality: Implement a search feature that allows users to search for blog posts based on keywords, locations, or hashtags. This will make it easier for users to discover relevant content.
+
+Follow/Unfollow Users: Add the ability for users to follow each other. Users can then see a personalized feed of posts from users they follow. Implement an "unfollow" functionality as well.
+
+Pagination: If the number of blog posts, comments, or likes/dislikes grows, consider implementing pagination to load content in smaller chunks for better performance.
+
+User Permissions: Implement different user roles (e.g., admin, moderator) with different access levels to manage and moderate content.
+
+Reporting and Moderation: Add a reporting system for inappropriate content, and implement moderation features to handle reported content appropriately.
+
+Notifications: Implement real-time or push notifications for likes, comments, and new followers to keep users engaged with the app.
+
+User Settings: Create a settings page where users can update their profile information, change their password, or manage email notification preferences.
+
+Remember, the goal is not to implement all these suggestions at once, but to gradually improve your application while learning new concepts along the way. As you work on your project, you'll likely come across new challenges and opportunities to expand the functionality. Don't hesitate to explore different aspects of app development and experiment with various features.
+
+Happy coding, and have fun building your "Travel Blog" application! If you have any specific questions or need further assistance during your development journey, feel free to ask.
